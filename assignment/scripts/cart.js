@@ -43,9 +43,23 @@ function isFull(array) {
 
 console.log(isFull(basket));
 
-basket = 5;
+//adding items to basket to test for other case
+addItem('apples', basket);
+addItem('bananas', basket);
+addItem('carrots', basket);
+addItem('onions', basket);
+addItem('garlic', basket);
 
 console.log(isFull(basket));
 
+function removeItem(item, array) {
+    let x = array.indexOf(item);
+    if (x == -1) {
+        return null;
+    } else {
+        return array.splice(x,1);
+    }
+}
 
-
+console.log(removeItem('apples', basket));
+console.log(removeItem('pumpkin', basket));
